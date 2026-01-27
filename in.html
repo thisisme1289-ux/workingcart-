@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Meds</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            background: #007bff;
+            color: #ffffff;
+            padding: 15px 0;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin-right: 20px;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffcc00;
+        }
+
+        .container {
+            display: flex;
+            width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        .products {
+            flex: 3;
+            margin-right: 20px;
+        }
+
+        .cart {
+            flex: 1;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        input[type="number"] {
+            width: 60px;
+            padding: 5px;
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .cart-item {
+            margin-bottom: 10px;
+        }
+
+        .buy-button {
+            width: 100%;
+            background-color: #007bff;
+            padding: 10px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .buy-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Easy Meds</h1>
+            <ul class="nav-links">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="products" id="products">
+            <header>
+                <h2>Available Products</h2>
+            </header>
+            <table id="product-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Price ($)</th>
+                        <th>Quantity</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Product rows will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="cart" id="cart">
+            <header>
+                <h2>Your Cart</h2>
+            </header>
+            <div id="cart-items">
+                <!-- Cart items will be displayed here -->
+                <p>Your cart is empty.</p>
+            </div>
+            <button class="buy-button" onclick="openModal()">Buy</button>
+        </div>
+    </div>
+
+    <!-- Modal for User Information -->
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Enter Your Information</h2>
+            <form id="userInfoForm">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" required><br><br>
+                <label for="address">Address:</label><br>
+                <input type="text" id="address" required><br><br>
+                <label for="contact">Contact:</label><br>
+                <input type="text" id="contact" required><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" required><br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
+        })();
+
+        const products = [
+            { id: 1, name: "Aspirin", price: 5.99 },
+            { id: 2, name: "Ibuprofen", price: 7.99 },
+            { id: 3, name: "Paracetamol", price: 4.99 },
+            { id: 4, name: "Antihistamine", price: 6.99 },
+            { id: 5, name: "Cough Syrup", price: 8.99 },
+            { id: 6, name: "Vitamins", price: 12.99 },
+            { id: 7, name: "Antibiotic", price: 14.99 },
+            { id: 8, name: "Gauze", price: 2.99 },
+            { id: 9, name: "Thermometer", price: 10.99 },
+            { id: 10, name: "First Aid Kit", price: 19.99 },
+            { id: 11, name: "Prescription Glasses", price: 99.99 },
+            { id: 12, name: "Hand Sanitizer", price: 3.99 }
+        ];
+
+        const productTableBody = document.querySelector("#product-table tbody");
+        const cartItems = document.getElementById("cart-items");
+        let cart = [];
+
+        products.forEach(product => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${product.id}</td>
+                <td>${product.name}</td>
+                <td>${product.price.toFixed(2)}</td>
+                <td><input type="number" min="1" value="1" id="quantity-${product.id}"></td>
+                <td><button onclick="addToCart(${product.id})">Add to Cart</button></td>
+            `;
+            productTableBody.appendChild(row);
+        });
+
+        function addToCart(productId) {
+            const quantityInput = document.getElementById(`quantity-${productId}`);
+            const quantity = parseInt(quantityInput.value);
+            const product = products.find(p => p.id === productId);
+            const cartItem = { ...product, quantity };
+
+            const existingItem = cart.find(item => item.id === productId);
+            if (existingItem) {
+                existingItem.quantity += quantity;
+            } else {
+                cart.push(cartItem);
+            }
+
+            updateCart();
+        }
+
+        function updateCart() {
+            cartItems.innerHTML = "";
+            if (cart.length === 0) {
+                cartItems.innerHTML = "<p>Your cart is empty.</p>";
+                return;
+            }
+
+            cart.forEach(item => {
+                const div = document.createElement("div");
+                div.className = "cart-item";
+                div.innerHTML = `${item.name} (x${item.quantity}) - $${(item.price * item.quantity).toFixed(2)}`;
+                cartItems.appendChild(div);
+            });
+        }
+
+        function openModal() {
+            if (cart.length === 0) {
+                alert("Your cart is empty!");
+                return;
+            }
+            document.getElementById("userModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("userModal").style.display = "none";
+        }
+
+        document.getElementById("userInfoForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const address = document.getElementById("address").value;
+            const contact = document.getElementById("contact").value;
+            const email = document.getElementById("email").value;
+
+            let total = 0;
+            let orderDetails = "Order Details:\n";
+            cart.forEach(item => {
+                total += item.price * item.quantity;
+                orderDetails += `${item.name} (x${item.quantity}) - $${(item.price * item.quantity).toFixed(2)}\n`;
+            });
+
+            orderDetails += `\nTotal: $${total.toFixed(2)}\n\n`;
+            orderDetails += `Customer Information:\nName: ${name}\nAddress: ${address}\nContact: ${contact}\nEmail: ${email}`;
+
+            // Sending email using EmailJS
+            emailjs.send("service_d3e8k9e", "template_qzp5e78", {
+                from_name: name,
+                to_name: "Easy Meds",
+                message: orderDetails,
+                reply_to: email
+            })
+            .then(function(response) {
+                alert('Email sent successfully!');
+            }, function(error) {
+                alert('Failed to send email. Please try again later.');
+            });
+
+            cart = [];
+            updateCart();
+            closeModal();
+        });
+
+        // Close the modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById("userModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>
