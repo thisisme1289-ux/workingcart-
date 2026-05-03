@@ -398,77 +398,67 @@
     <div id="feat-whl-host"></div>
   </section>
 
-  <!-- ═══ GOOGLE MAPS + NAP SECTION (NEW) ═══
-       CHANGE: Added Google Maps embed for local pack signals
-       CHANGE: NAP wrapped in <address> with schema microdata
-       CHANGE: Section visible and crawlable
-  -->
-  <section class="location-sec" id="locationSec" aria-label="Location and contact information"
-           style="background:var(--warm);padding:80px 0;">
-    <div class="sec-wrap">
-      <div class="kicker">Find Us</div>
-      <h2 class="sec-h2">Visit Annamay in <span>Prayagraj</span></h2>
-      <div style="display:flex;gap:48px;flex-wrap:wrap;align-items:flex-start;margin-top:8px;">
+  <!-- LOCATION SECTION — map + button only, NAP in footer -->
+  <section class="location-sec" id="locationSec"
+           aria-label="Location and contact information"
+           style="background:var(--warm);padding:64px 0 72px;">
 
-        <!-- Address + contact block -->
-        <div style="flex:1;min-width:260px;">
-          <address itemscope itemtype="https://schema.org/Restaurant"
-                   style="font-style:normal;margin-bottom:24px;">
-            <meta itemprop="name" content="Annamay Restaurant & Bakery">
-          <link itemprop="hasMap" href="https://maps.app.goo.gl/nCLx3PpQyQZzJhC76">
-            <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;margin-bottom:12px;color:var(--ink);">
-              Annamay Restaurant &amp; Bakery
-            </p>
-            <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"
-               style="color:var(--muted);line-height:1.8;margin-bottom:16px;">
-              <span itemprop="streetAddress">Sector-E, Shantipuram, Phaphamau</span><br>
-              <span itemprop="addressLocality">Prayagraj</span>,
-              <span itemprop="addressRegion">Uttar Pradesh</span> —
-              <span itemprop="postalCode">211013</span><br>
-              <span itemprop="addressCountry" style="display:none">India</span>
-            </p>
-            <p style="margin-bottom:8px;">
-              <strong>Phone / WhatsApp:</strong>
-              <a itemprop="telephone" href="tel:+917523992202"
-                 style="color:var(--p);font-weight:600;">+91 75239 92202</a>
-            </p>
-            <p style="margin-bottom:8px;">
-              <strong>Email:</strong>
-              <a href="mailto:hello@annamay.in" style="color:var(--p);">hello@annamay.in</a>
-            </p>
-            <p itemprop="openingHours" datetime="Mo-Fr 08:00-22:00" style="margin-bottom:4px;">
-              <strong>Mon–Fri:</strong> 8:00 AM – 10:00 PM
-            </p>
-            <p itemprop="openingHours" datetime="Sa 08:00-23:00" style="margin-bottom:4px;">
-              <strong>Saturday:</strong> 8:00 AM – 11:00 PM
-            </p>
-            <p itemprop="openingHours" datetime="Su 09:00-22:00">
-              <strong>Sunday:</strong> 9:00 AM – 10:00 PM
-            </p>
-          </address>
-          <a href="https://maps.app.goo.gl/nCLx3PpQyQZzJhC76"
-             target="_blank" rel="noopener"
-             class="btn-p" style="display:inline-flex;text-decoration:none;">
-            <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Get Directions
-          </a>
-        </div>
-
-        <!-- Google Maps embed -->
-        <div style="flex:2;min-width:280px;border-radius:16px;overflow:hidden;box-shadow:var(--sh-md);">
-          <iframe
-            title="Annamay Restaurant &amp; Bakery location — Shantipuram Phaphamau Prayagraj"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3601.15!2d81.86760!3d25.50660!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399acbd98ca201a5%3A0x90720ff68312167b!2sAnnamay%20Restaurant%20and%20Bakery!5e0!3m2!1sen!2sin!4v1715000000000!5m2!1sen!2sin"
-            width="100%"
-            height="340"
-            style="border:0;display:block;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-
+    <!-- Hidden SEO microdata — crawlers read, users don't see -->
+    <div itemscope itemtype="https://schema.org/Restaurant" style="display:none;">
+      <meta itemprop="name"      content="Annamay Restaurant & Bakery">
+      <meta itemprop="telephone" content="+917523992202">
+      <meta itemprop="url"       content="https://annamay.in/">
+      <link itemprop="hasMap"    href="https://maps.app.goo.gl/nCLx3PpQyQZzJhC76">
+      <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <meta itemprop="streetAddress"   content="Sector-E, Shantipuram, Phaphamau">
+        <meta itemprop="addressLocality" content="Prayagraj">
+        <meta itemprop="addressRegion"   content="Uttar Pradesh">
+        <meta itemprop="postalCode"      content="211013">
+        <meta itemprop="addressCountry"  content="IN">
       </div>
+      <meta itemprop="openingHours" content="Mo-Fr 08:00-22:00">
+      <meta itemprop="openingHours" content="Sa 08:00-23:00">
+      <meta itemprop="openingHours" content="Su 09:00-22:00">
+    </div>
+
+    <div class="sec-wrap">
+
+      <!-- Heading — centred on all sizes -->
+      <div style="text-align:center;margin-bottom:32px;">
+        <div class="kicker">Find Us</div>
+        <h2 class="sec-h2" style="margin-bottom:0;">
+          Visit Annamay in <span>Prayagraj</span>
+        </h2>
+      </div>
+
+      <!-- Map — full width, rounded card -->
+      <div style="border-radius:20px;overflow:hidden;box-shadow:var(--sh-md);margin-bottom:24px;">
+        <iframe
+          title="Annamay Restaurant &amp; Bakery — Shantipuram Phaphamau Prayagraj"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3601.15!2d81.86760!3d25.50660!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399acbd98ca201a5%3A0x90720ff68312167b!2sAnnamay%20Restaurant%20and%20Bakery!5e0!3m2!1sen!2sin!4v1715000000000!5m2!1sen!2sin"
+          width="100%"
+          height="360"
+          style="border:0;display:block;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <!-- Single centred button -->
+      <div style="display:flex;justify-content:center;">
+        <a href="https://maps.app.goo.gl/nCLx3PpQyQZzJhC76"
+           target="_blank" rel="noopener"
+           class="btn-p" style="text-decoration:none;">
+          <svg viewBox="0 0 24 24" width="15" height="15"
+               stroke="currentColor" fill="none" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          Get Directions
+        </a>
+      </div>
+
     </div>
   </section>
 
@@ -505,6 +495,21 @@
           <div class="footer-contact-item">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             <span>Open Daily: 8:00 AM – 11:00 PM</span>
+          </div>
+          <div style="margin-top:14px;">
+            <a href="https://maps.app.goo.gl/nCLx3PpQyQZzJhC76"
+               target="_blank" rel="noopener"
+               style="display:inline-flex;align-items:center;gap:7px;
+                      background:var(--p);color:#fff;text-decoration:none;
+                      padding:8px 16px;border-radius:50px;font-size:12px;font-weight:700;
+                      box-shadow:var(--sh-g);transition:all .2s;">
+              <svg viewBox="0 0 24 24" width="13" height="13"
+                   fill="none" stroke="#fff" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              Get Directions
+            </a>
           </div>
         </address>
       </div>
@@ -567,6 +572,21 @@
           <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sector-E, Shantipuram, Phaphamau,<br>Prayagraj, Uttar Pradesh — 211013</span></div>
           <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.95 13a19.79 19.79 0 01-3.07-8.67A2 2 0 012.86 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><a href="tel:+917523992202" style="color:inherit;">+91 75239 92202</a></div>
           <div class="footer-contact-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Open Daily: 8:00 AM – 10:00 PM</span></div>
+          <div style="margin-top:14px;">
+            <a href="https://maps.app.goo.gl/nCLx3PpQyQZzJhC76"
+               target="_blank" rel="noopener"
+               style="display:inline-flex;align-items:center;gap:7px;
+                      background:var(--p);color:#fff;text-decoration:none;
+                      padding:8px 16px;border-radius:50px;font-size:12px;font-weight:700;
+                      box-shadow:var(--sh-g);transition:all .2s;">
+              <svg viewBox="0 0 24 24" width="13" height="13"
+                   fill="none" stroke="#fff" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              Get Directions
+            </a>
+          </div>
         </address>
       </div>
       <div class="footer-col">
@@ -706,4 +726,4 @@
 <!-- CHANGE: seo.js loads last — needs MENU from data.js to be available -->
 <script src="js/seo.js"></script>
 </body>
-                                                                                                                                                                                                                                             </html>
+     </html>
