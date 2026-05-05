@@ -5,8 +5,13 @@ window.addEventListener('scroll', () =>
   document.getElementById('nav').classList.toggle('raised', scrollY > 20), { passive: true });
 
 /* ═══════════════════════════════════════
-   ROUTING
+   KITCHEN — PASSWORD
+   Change KITCHEN_PWD to your own password.
+   Uses sessionStorage so it clears when the
+   browser tab is closed.
 ═══════════════════════════════════════ */
+const KITCHEN_PWD = 'annamay2024';
+
 /* ═══════════════════════════════════════
    ORDER STATUS MANAGEMENT
 ═══════════════════════════════════════ */
@@ -74,14 +79,31 @@ function toggleOrders(isOpen) {
   ordersOpen = isOpen;
   localStorage.setItem('annamay_orders_open', isOpen ? 'true' : 'false');
   applyOrderStatus();
-  toast(isOpen ? '✅ Orders are now OPEN' : '🔴 Orders are now CLOSED');
+  toast(isOpen ? '\u2705 Orders are now OPEN' : '\uD83D\uDD34 Orders are now CLOSED');
 }
 
 function initRoute() {
   const p = new URLSearchParams(location.search);
   if (p.get('view') === 'kitchen') {
-    document.querySelectorAll('.page').forEach(x => x.classList.remove('on'));
-    document.getElementById('kitchenPg').classList.add('on');
+    /* ── Kitchen password gate ── */
+    const authed = sessionStorage.getItem('k_auth') === KITCHEN_PWD;
+    if (!authed) {
+      const entered = prompt('Kitchen access \u2014 enter password:');
+      if (entered !== KITCHEN_PWD) {
+        /* Wrong password: redirect to home silently */
+        history.replaceState({}, '', '/');
+        applyOrderStatus();
+        return;
+      }
+      sessionStorage.setItem('k_auth', KITCHEN_PWD);
+    }
+    document.querySelectorAll('.page').forEach(x => {
+      x.classList.remove('on');
+      x.setAttribute('aria-hidden', 'true');
+    });
+    const kPg = document.getElementById('kitchenPg');
+    kPg.classList.add('on');
+    kPg.removeAttribute('aria-hidden');
     renderKitchen();
   }
   applyOrderStatus();
@@ -92,8 +114,14 @@ function initRoute() {
    PAGE NAV
 ═══════════════════════════════════════ */
 function showPage(id) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('on'));
-  document.getElementById(id).classList.add('on');
+  /* Hide all pages and mark them invisible to assistive tech / crawlers */
+  document.querySelectorAll('.page').forEach(p => {
+    p.classList.remove('on');
+    p.setAttribute('aria-hidden', 'true');
+  });
+  const target = document.getElementById(id);
+  target.classList.add('on');
+  target.removeAttribute('aria-hidden');
   scrollTo(0, 0);
 }
 function goHome() { showPage('home'); }
@@ -228,7 +256,7 @@ function openModal(id, name, price, cat) {
   document.getElementById('mImg').src = getImg(name);
   document.getElementById('mCat').textContent = cat || activeCat;
   document.getElementById('mName').textContent = name;
-  document.getElementById('mPrice').textContent = '₹' + price;
+  document.getElementById('mPrice').textContent = '\u20B9' + price;
   document.getElementById('qVal').textContent = '1';
   const sbW = window.innerWidth - document.documentElement.clientWidth;
   const navBase = window.innerWidth <= 640 ? 16 : 32;
@@ -274,7 +302,7 @@ function refreshCart() {
   if (count) {
     fb.classList.add('up');
     document.getElementById('fbCount').textContent = count + ' item' + (count>1?'s':'');
-    document.getElementById('fbPrice').textContent = '₹' + total;
+    document.getElementById('fbPrice').textContent = '\u20B9' + total;
   } else fb.classList.remove('up');
 
   /* Nav chip */
@@ -282,7 +310,7 @@ function refreshCart() {
   if (count) {
     chip.textContent = count; chip.style.display = 'inline-block';
     chip.classList.add('pop'); setTimeout(() => chip.classList.remove('pop'), 400);
-    document.getElementById('nav-lbl').textContent = '₹' + total;
+    document.getElementById('nav-lbl').textContent = '\u20B9' + total;
   } else {
     chip.style.display = 'none';
     document.getElementById('nav-lbl').textContent = 'Cart';
@@ -292,13 +320,13 @@ function refreshCart() {
   const sub = document.getElementById('cSubtotal');
   const cgstEl = document.getElementById('cCgst');
   const sgstEl = document.getElementById('cSgst');
-  if (sub)   sub.textContent = '₹' + subtotal;
-  if (cgstEl) cgstEl.textContent = '₹' + cgst;
-  if (sgstEl) sgstEl.textContent = '₹' + sgst;
+  if (sub)   sub.textContent = '\u20B9' + subtotal;
+  if (cgstEl) cgstEl.textContent = '\u20B9' + cgst;
+  if (sgstEl) sgstEl.textContent = '\u20B9' + sgst;
 
   /* Total */
   const tv = document.getElementById('cTotal');
-  tv.textContent = '₹' + total;
+  tv.textContent = '\u20B9' + total;
   tv.classList.add('bump'); setTimeout(() => tv.classList.remove('bump'), 400);
 
   /* Body */
@@ -310,13 +338,13 @@ function refreshCart() {
   } else {
     body.innerHTML = cart.map(c => `
       <div class="c-row">
-        <img class="c-row-img" src="${getImg(c.name)}" alt="${c.name}">
+        <img class="c-row-img" src="${getImg(c.name)}" alt="${c.name}" loading="lazy">
         <div class="c-row-info">
           <div class="c-row-nm">${c.name}</div>
-          <div class="c-row-pr">₹${c.price} × ${c.qty} = ₹${c.price*c.qty}</div>
+          <div class="c-row-pr">\u20B9${c.price} \xD7 ${c.qty} = \u20B9${c.price*c.qty}</div>
         </div>
         <div class="c-ctrl">
-          <button class="cc-b" onclick="chgQty('${c.id}',-1)">−</button>
+          <button class="cc-b" onclick="chgQty('${c.id}',-1)">\u2212</button>
           <span class="cc-n">${c.qty}</span>
           <button class="cc-b" onclick="chgQty('${c.id}',1)">+</button>
         </div>
@@ -331,7 +359,6 @@ function chgQty(id, d) {
 }
 
 function openCart() {
-  /* Measure scrollbar width BEFORE locking so we can compensate */
   const sbW = window.innerWidth - document.documentElement.clientWidth;
   const navBase = window.innerWidth <= 640 ? 16 : 32;
   document.body.style.paddingRight = sbW + 'px';
@@ -350,7 +377,6 @@ function closeCart() {
   dr.classList.remove('open');
   document.getElementById('cBd').classList.remove('on');
 
-  /* Wait for close animation before restoring scroll */
   setTimeout(() => {
     dr.classList.remove('closing');
     document.body.style.paddingRight = '';
@@ -444,7 +470,6 @@ function placeOrder() {
   orders.push(order);
   localStorage.setItem('annamay_orders', JSON.stringify(orders));
 
-  /* Save to device order history */
   if (typeof window.saveOrderToHistory === 'function') window.saveOrderToHistory(order);
 
   const nl = '%0A';
@@ -466,7 +491,6 @@ function placeOrder() {
     '%F0%9F%8F%A0 *Address:* ' + encodeURIComponent(addr) +
     locLine;
 
-  /* Snapshot before clearing cart */
   const cartSnapshot = [...cart];
   cart = []; sharedLocationUrl = '';
   save(); refreshCart();
@@ -480,7 +504,6 @@ function placeOrder() {
   closeCart();
   toast('Order sent via WhatsApp!');
 
-  /* Fire install prompt THEN open WhatsApp */
   const openWA = () => window.open('https://wa.me/917523992202?text=' + msg, '_blank');
   if (typeof window.triggerInstallPrompt === 'function') {
     window.triggerInstallPrompt(openWA);
@@ -488,8 +511,6 @@ function placeOrder() {
     openWA();
   }
 }
-
-
 
 /* ═══════════════════════════════════════
    KITCHEN
@@ -518,8 +539,8 @@ function kCard(o, status) {
       <div class="k-av">${init}</div>
       <div><div class="k-cname">${o.customer.name}</div><div class="k-cph">${o.customer.phone}</div></div>
     </div>
-    <div class="k-items">${o.items.map(i=>`<div class="k-item"><span class="k-item-n">${i.name}</span><span class="k-item-q">×${i.qty}</span><span class="k-item-p">₹${i.price*i.qty}</span></div>`).join('')}</div>
-    <div class="k-total"><span>Total</span><span class="k-total-a">₹${o.total}</span></div>
+    <div class="k-items">${o.items.map(i=>`<div class="k-item"><span class="k-item-n">${i.name}</span><span class="k-item-q">\xD7${i.qty}</span><span class="k-item-p">\u20B9${i.price*i.qty}</span></div>`).join('')}</div>
+    <div class="k-total"><span>Total</span><span class="k-total-a">\u20B9${o.total}</span></div>
     <div class="k-acts">
       ${status==='new'
         ? `<button class="k-btn-done" onclick="event.stopPropagation();completeOrder('${o.id}')">Mark Complete</button>`
@@ -539,15 +560,15 @@ function viewOrder(id) {
   const o = orders.find(x => x.id===id); if (!o) return;
   document.getElementById('kDetPanel').innerHTML = `
     <div class="k-det-h"><div class="k-det-title">${o.id}</div>
-      <button class="k-det-x" onclick="closeKDet()">×</button></div>
+      <button class="k-det-x" onclick="closeKDet()">\xD7</button></div>
     <div class="k-det-s"><div class="k-det-l">Customer</div>
       <div class="k-det-v">${o.customer.name}<br>${o.customer.phone}<br>${o.customer.address}</div></div>
     <div class="k-det-s"><div class="k-det-l">Order Items</div>
       <div class="k-det-v">
         ${o.items.map(i=>`<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.06)">
-          <span>${i.name} ×${i.qty}</span><span style="color:var(--a);font-family:'DM Mono',monospace">₹${i.price*i.qty}</span></div>`).join('')}
+          <span>${i.name} \xD7${i.qty}</span><span style="color:var(--a);font-family:'DM Mono',monospace">\u20B9${i.price*i.qty}</span></div>`).join('')}
         <div style="display:flex;justify-content:space-between;padding:12px 0 0;font-weight:700;font-size:15px;color:#fff">
-          <span>Total</span><span>₹${o.total}</span></div>
+          <span>Total</span><span>\u20B9${o.total}</span></div>
       </div></div>
     <div class="k-det-s"><div class="k-det-l">Placed At</div><div class="k-det-v">${o.time}</div></div>
     ${o.status==='new' ? `<button class="k-btn-done" style="width:100%;margin-top:8px" onclick="completeOrder('${o.id}');closeKDet()">Mark as Complete</button>` : ''}`;
@@ -572,6 +593,13 @@ function call() { location.href = 'tel:+917523992202'; }
 /* ═══════════════════════════════════════
    INIT
 ═══════════════════════════════════════ */
+/* Mark non-home pages as aria-hidden on first load */
+(function initAria() {
+  document.querySelectorAll('.page:not(#home)').forEach(p =>
+    p.setAttribute('aria-hidden', 'true')
+  );
+})();
+
 buildDots();
 resetTimer();
 initFeatWheel();
@@ -583,45 +611,89 @@ initRoute();
 ═══════════════════════════════════════ */
 function updateFooterStatus() {
   const now = new Date();
-  const day = now.getDay(); // 0=Sun,1=Mon...6=Sat
-  const h = now.getHours();
-  const m = now.getMinutes();
-  const mins = h * 60 + m;
+  const day = now.getDay(); /* 0=Sun, 1-5=Mon-Fri, 6=Sat */
+  const mins = now.getHours() * 60 + now.getMinutes();
 
-  // Hours: Mon-Fri 8AM-10PM, Sat 8AM-11PM, Sun 9AM-10PM
+  /* ── Hours truth table ── */
   let openMin, closeMin;
-  if (day === 0) { openMin = 9*60;  closeMin = 22*60; }       // Sunday
-  else if (day === 6) { openMin = 8*60; closeMin = 23*60; }   // Saturday
-  else { openMin = 8*60; closeMin = 22*60; }                  // Mon–Fri
+  if (day === 0)      { openMin = 9*60;  closeMin = 22*60; } /* Sun  9AM-10PM */
+  else if (day === 6) { openMin = 8*60;  closeMin = 23*60; } /* Sat  8AM-11PM */
+  else                { openMin = 8*60;  closeMin = 22*60; } /* M-F  8AM-10PM */
 
   const isOpen = mins >= openMin && mins < closeMin;
 
+  /* ── Highlight only TODAY's row ── */
+  document.querySelectorAll('.footer-hours-row').forEach(row => {
+    const d = row.getAttribute('data-day');
+    const isToday =
+      (d === '0'       && day === 0) ||
+      (d === '6'       && day === 6) ||
+      (d === 'weekday' && day >= 1 && day <= 5);
+    row.classList.toggle('today', isToday);
+  });
+
+  /* ── Open/closed badge ── */
   const openHTML = isOpen
-    ? `<span style="font-size:11px;color:var(--a);font-weight:700;">&#9679; We're Open Now!</span>
+    ? `<span style="font-size:11px;color:var(--a);font-weight:700;">&#9679; We\u2019re Open Now!</span>
        <p style="font-size:11px;color:rgba(255,255,255,.4);margin-top:4px;">Dine-in &amp; Delivery available</p>`
     : `<span style="font-size:11px;color:#f87171;font-weight:700;">&#9679; Currently Closed</span>
-       <p style="font-size:11px;color:rgba(255,255,255,.4);margin-top:4px;">We'll be back soon — see hours above</p>`;
+       <p style="font-size:11px;color:rgba(255,255,255,.4);margin-top:4px;">We\u2019ll be back soon \u2014 see hours above</p>`;
 
-  const closedStyle = isOpen
+  const badgeStyle = isOpen
     ? 'background:rgba(43,191,155,.1);border:1px solid rgba(43,191,155,.2);'
     : 'background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);';
 
   ['openStatusBadge1','openStatusBadge2'].forEach(id => {
     const el = document.getElementById(id);
-    if (el) { el.style.cssText += closedStyle; el.innerHTML = openHTML; }
+    if (el) { el.style.cssText = badgeStyle; el.innerHTML = openHTML; }
   });
 
-  // Copyright auto-year
-  const yr = now.getFullYear();
-  const copy = '\u00A9 ' + yr + ' Annamay Restaurant &amp; Bakery. All rights reserved.';
+  /* ── Copyright auto-year ── */
+  const copy = '\u00A9 ' + now.getFullYear() + ' Annamay Restaurant &amp; Bakery. All rights reserved.';
   ['copyrightLine1','copyrightLine2'].forEach(id => {
     const el = document.getElementById(id);
     if (el) el.innerHTML = copy;
   });
 }
 
+/* ═══════════════════════════════════════
+   CART FOCUS TRAP
+   Keeps keyboard/screen-reader focus inside
+   the cart drawer while it is open.
+═══════════════════════════════════════ */
+(function initCartFocusTrap() {
+  const FOCUSABLE = 'a[href],button:not([disabled]),input,textarea,select,[tabindex]:not([tabindex="-1"])';
+
+  document.addEventListener('keydown', e => {
+    const dr = document.getElementById('cDr');
+    if (!dr || !dr.classList.contains('open')) return;
+    if (e.key !== 'Tab') {
+      if (e.key === 'Escape') closeCart();
+      return;
+    }
+    const nodes = [...dr.querySelectorAll(FOCUSABLE)].filter(n => !n.closest('[aria-hidden="true"]'));
+    if (!nodes.length) return;
+    const first = nodes[0], last = nodes[nodes.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+      if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
+    }
+  });
+
+  /* Move focus into drawer when it opens */
+  const origOpen = window.openCart;
+  window.openCart = function() {
+    origOpen();
+    requestAnimationFrame(() => {
+      const dr = document.getElementById('cDr');
+      const first = dr && dr.querySelector(FOCUSABLE);
+      if (first) first.focus();
+    });
+  };
+})();
+
 updateFooterStatus();
-// Refresh every minute so the badge flips exactly at open/close time
 setInterval(updateFooterStatus, 60000);
 
 /* ═══════════════════════════════════════
