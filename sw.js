@@ -3,9 +3,9 @@
    Strategy: Cache-first for assets, network-first for HTML
 ═══════════════════════════════════════════════════════════ */
 
-const CACHE_NAME   = 'annamay-v1';
-const STATIC_CACHE = 'annamay-static-v1';
-const IMG_CACHE    = 'annamay-images-v1';
+const CACHE_NAME   = 'annamay-v2';
+const STATIC_CACHE = 'annamay-static-v2';
+const IMG_CACHE    = 'annamay-images-v2';
 
 /* Core assets to pre-cache on install */
 const PRECACHE_URLS = [
@@ -20,6 +20,7 @@ const PRECACHE_URLS = [
   '/js/wheel.js',
   '/js/app.js',
   '/js/pwa.js',
+  '/js/seo.js',
   '/manifest.json',
   '/images/default.jpg',
   'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap'
