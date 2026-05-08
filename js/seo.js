@@ -78,7 +78,8 @@
   aiBlock.className = 'ai-summary-block';
   aiBlock.setAttribute('aria-label', 'Business Summary for Accessibility and AI');
   aiBlock.setAttribute('data-type', 'ai-readable-business-summary');
-
+  aiBlock.setAttribute('data-nosnippet', '');   
+   
   /* Build category + item list for the summary */
   const catLines = Object.entries(MENU).map(([cat, items]) => {
     const names = items.map(i => i.name).join(', ');
