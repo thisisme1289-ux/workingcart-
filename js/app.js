@@ -455,7 +455,6 @@ function shareLocation() {
    Endpoint: https://formspree.io/f/xaqvpqlg
 ═══════════════════════════════════════ */
 function sendOrderToFormspree(order) {
-  /* Build a clean, readable item list for the email body */
   const itemLines = order.items
     .map(i => i.name + ' x' + i.qty + ' = Rs.' + (i.price * i.qty))
     .join('\n');
@@ -480,30 +479,14 @@ function sendOrderToFormspree(order) {
     'SGST 2.5%: Rs.' + order.sgst + '\n' +
     'Grand Total: Rs.' + order.total;
 
-  /* Fire and forget — no await, no blocking */
   fetch('https://formspree.io/f/xaqvpqlg', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify({
-      /* Formspree uses _subject for the email subject line */
-      _subject: '\uD83C\uDF7D\uFE0F New Order ' + order.id + ' — Rs.' + order.total + ' | Annamay',
-      order_id:       order.id,
-      order_time:     order.time,
-      customer_name:  order.customer.name,
-      customer_phone: '+91 ' + order.customer.phone,
-      delivery_address: order.customer.address,
-      delivery_location: sharedLocationUrl || 'Not shared',
-      items_summary:  itemLines,
-      subtotal:       'Rs.' + order.subtotal,
-      cgst:           'Rs.' + order.cgst,
-      sgst:           'Rs.' + order.sgst,
-      grand_total:    'Rs.' + order.total,
-      /* Full readable copy as a single field for the email body */
-      message:        emailBody
+      _subject: 'Order ' + order.id,
+      message:  emailBody
     })
-  }).catch(() => {
-    /* Silent fail — WhatsApp order is already sent, email is best-effort */
-  });
+  }).catch(() => {});
 }
 
 /* ═══════════════════════════════════════
