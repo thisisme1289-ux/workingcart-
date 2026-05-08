@@ -449,6 +449,64 @@ function shareLocation() {
 }
 
 /* ═══════════════════════════════════════
+   FORMSPREE — BACKGROUND EMAIL
+   Fires silently when the customer places an
+   order. Does not block or delay WhatsApp.
+   Endpoint: https://formspree.io/f/xaqvpqlg
+═══════════════════════════════════════ */
+function sendOrderToFormspree(order) {
+  /* Build a clean, readable item list for the email body */
+  const itemLines = order.items
+    .map(i => i.name + ' x' + i.qty + ' = Rs.' + (i.price * i.qty))
+    .join('\n');
+
+  const locationLine = sharedLocationUrl
+    ? '\nDelivery Location (Maps): ' + sharedLocationUrl
+    : '';
+
+  const emailBody =
+    'ORDER ID: ' + order.id + '\n' +
+    'Time: ' + order.time + '\n\n' +
+    '--- CUSTOMER ---\n' +
+    'Name: ' + order.customer.name + '\n' +
+    'Phone: +91 ' + order.customer.phone + '\n' +
+    'Address: ' + order.customer.address +
+    locationLine + '\n\n' +
+    '--- ITEMS ---\n' +
+    itemLines + '\n\n' +
+    '--- BILL ---\n' +
+    'Subtotal : Rs.' + order.subtotal + '\n' +
+    'CGST 2.5%: Rs.' + order.cgst + '\n' +
+    'SGST 2.5%: Rs.' + order.sgst + '\n' +
+    'Grand Total: Rs.' + order.total;
+
+  /* Fire and forget — no await, no blocking */
+  fetch('https://formspree.io/f/xaqvpqlg', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      /* Formspree uses _subject for the email subject line */
+      _subject: '\uD83C\uDF7D\uFE0F New Order ' + order.id + ' — Rs.' + order.total + ' | Annamay',
+      order_id:       order.id,
+      order_time:     order.time,
+      customer_name:  order.customer.name,
+      customer_phone: '+91 ' + order.customer.phone,
+      delivery_address: order.customer.address,
+      delivery_location: sharedLocationUrl || 'Not shared',
+      items_summary:  itemLines,
+      subtotal:       'Rs.' + order.subtotal,
+      cgst:           'Rs.' + order.cgst,
+      sgst:           'Rs.' + order.sgst,
+      grand_total:    'Rs.' + order.total,
+      /* Full readable copy as a single field for the email body */
+      message:        emailBody
+    })
+  }).catch(() => {
+    /* Silent fail — WhatsApp order is already sent, email is best-effort */
+  });
+}
+
+/* ═══════════════════════════════════════
    ORDER
 ═══════════════════════════════════════ */
 function placeOrder() {
@@ -471,6 +529,9 @@ function placeOrder() {
   localStorage.setItem('annamay_orders', JSON.stringify(orders));
 
   if (typeof window.saveOrderToHistory === 'function') window.saveOrderToHistory(order);
+
+  /* ── Fire Formspree email silently in background ── */
+  sendOrderToFormspree(order);
 
   const nl = '%0A';
   const itemLines = cart.map(c => '  ' + c.name + ' x' + c.qty + '  =  Rs.' + (c.price*c.qty)).join(nl);
