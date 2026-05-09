@@ -508,8 +508,8 @@ function getImg(n){
 let cart=JSON.parse(localStorage.getItem('annamay5')||'[]');
 let activeCat='South Indian', selItem=null, selQty=1, searchMode=false;
 let slideIdx=0; const SLIDES=6; let slideTimer;
-let orders=JSON.parse(localStorage.getItem('annamay_orders')||'[]');
-let ordersOpen = localStorage.getItem('annamay_orders_open') !== 'false'; // default open
+const FB = 'https://restaurant-a6aee-default-rtdb.asia-southeast1.firebasedatabase.app';
+let ordersOpen = true;
 
 /* ═══════════════════════════════════════
    ██████████████████████████████████
