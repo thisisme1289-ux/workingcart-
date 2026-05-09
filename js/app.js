@@ -490,6 +490,37 @@ function sendOrderToFormspree(order) {
 }
 
 /* ═══════════════════════════════════════
+   NTFY PUSH NOTIFICATION
+═══════════════════════════════════════ */
+function sendOrderToNtfy(order) {
+  const itemLines = order.items
+    .map(i => '  • ' + i.name + ' x' + i.qty + '  =  Rs.' + (i.price * i.qty))
+    .join('\n');
+
+  const body =
+    'Customer : ' + order.customer.name + '\n' +
+    'Phone    : +91 ' + order.customer.phone + '\n' +
+    '─────────────────────\n' +
+    itemLines + '\n' +
+    '─────────────────────\n' +
+    'Subtotal : Rs.' + order.subtotal + '\n' +
+    'GST (5%) : Rs.' + (order.cgst + order.sgst) + '\n' +
+    'TOTAL    : Rs.' + order.total + '\n' +
+    '─────────────────────\n' +
+    'Address  : ' + order.customer.address;
+
+  fetch('https://ntfy.sh/annamay-orders-7qxm39kp', {
+    method: 'POST',
+    headers: {
+      'Title':    'New Order ' + order.id + ' | ' + order.time,
+      'Priority': 'high',
+      'Tags':     'bell,fork_and_knife'
+    },
+    body: body
+  }).catch(() => {});
+}
+
+/* ═══════════════════════════════════════
    ORDER
 ═══════════════════════════════════════ */
 function placeOrder() {
