@@ -658,31 +658,6 @@
   </footer>
 </div><!-- end #menuPg -->
 
-<!-- ═══════════════════════════ KITCHEN PAGE ═══════════════════════════ -->
-<!-- Password-gated via initRoute() in app.js — never shown to public users -->
-<div class="page kitchen" id="kitchenPg" aria-hidden="true">
-  <div class="k-head">
-    <div class="k-title">Kitchen Monitor</div>
-    <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
-      <div class="k-toggle-wrap">
-        <span class="k-toggle-label">Orders</span>
-        <label class="k-switch" title="Toggle online orders">
-          <input type="checkbox" id="orderToggle" onchange="toggleOrders(this.checked)">
-          <div class="k-switch-track"></div>
-          <div class="k-switch-thumb"></div>
-        </label>
-        <span class="k-toggle-status" id="kToggleStatus">Closed</span>
-      </div>
-      <div class="k-live"><span class="k-live-dot"></span> Live Orders</div>
-    </div>
-  </div>
-  <div class="k-body">
-    <div class="k-sec-t">Active Orders</div>
-    <div class="k-grid" id="kActive"></div>
-    <div class="k-sec-t" style="margin-top:8px">Completed</div>
-    <div class="k-grid k-done-wrap" id="kDone"></div>
-  </div>
-</div><!-- end #kitchenPg -->
 
 <!-- ═══════════════════════════ MODALS ═══════════════════════════ -->
 <div class="k-det-ov" id="kDetOv" onclick="closeKDet(event)">
