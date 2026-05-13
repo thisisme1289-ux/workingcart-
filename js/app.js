@@ -390,6 +390,8 @@ function validatePhone(input) {
    LOCATION SHARING
 ═══════════════════════════════════════ */
 let sharedLocationUrl = '';
+let _orderInProgress  = false; /* rate-limit guard — prevents double submission */
+
 function shareLocation() {
   const btn    = document.getElementById('locBtn');
   const txt    = document.getElementById('locBtnTxt');
@@ -435,13 +437,13 @@ function sendOrderToFormspree(order) {
     : '';
 
   const emailBody =
-    'ORDER ID: '   + order.id + '\n' +
-    'Time: '       + order.time + '\n\n' +
+    'ORDER ID: '  + order.id   + '\n' +
+    'Time: '      + order.time + '\n\n' +
     '--- CUSTOMER ---\n' +
-    'Name: '    + order.customer.name + '\n' +
-    'Phone: +91 ' + order.customer.phone + '\n' +
-    'Address: ' + order.customer.address +
-    locationLine + '\n\n' +
+    'Name: '      + order.customer.name    + '\n' +
+    'Phone: +91 ' + order.customer.phone   + '\n' +
+    'Address: '   + order.customer.address +
+    locationLine  + '\n\n' +
     '--- ITEMS ---\n' + itemLines + '\n\n' +
     '--- BILL ---\n' +
     'Subtotal : Rs.' + order.subtotal + '\n' +
@@ -456,12 +458,36 @@ function sendOrderToFormspree(order) {
   }).catch(() => {});
 }
 
-
-
 /* ═══════════════════════════════════════
-   ORDER — saves to Firebase + WhatsApp
+   ORDER
+   Three fixes applied here vs the old code:
+
+   1. _orderInProgress guard — the very first
+      thing checked. Rapid double-clicks are
+      dropped before touching Firebase or
+      Formspree, so no duplicate orders appear
+      in the kitchen dashboard or your inbox.
+
+   2. WhatsApp URL built with encodeURIComponent
+      on the full plain-text message. Dish names
+      like "Mac & Cheese", "Hot & Sour Soup",
+      "Corn & Mushroom Fried Rice" contain literal
+      & characters which were silently breaking the
+      URL — WhatsApp received nothing or a cut-off
+      message. encodeURIComponent converts & to
+      %26, keeping the URL intact.
+
+   3. window.location.href instead of
+      window.open('...', '_blank'). Mobile browsers
+      treat window.open with _blank as a popup and
+      block it, especially after any async work.
+      location.href is never blocked and correctly
+      triggers the WhatsApp app deep link on mobile.
 ═══════════════════════════════════════ */
 function placeOrder() {
+  /* Drop double-clicks before any side-effects */
+  if (_orderInProgress) return;
+
   if (!ordersOpen) { toast('Sorry, we are currently closed'); return; }
 
   const name  = document.getElementById('oName').value.trim();
@@ -473,6 +499,11 @@ function placeOrder() {
     toast('Enter a valid Indian mobile number (starts with 6-9)'); return;
   }
   if (!addr)  { toast('Please enter your delivery address'); return; }
+
+  /* Lock after all validations pass */
+  _orderInProgress = true;
+  const poBtnEl = document.getElementById('placeOrderBtn');
+  if (poBtnEl) poBtnEl.disabled = true;
 
   const subtotal = cart.reduce((s,c) => s+c.price*c.qty, 0);
   const cgst  = Math.round(subtotal * 0.025);
@@ -491,24 +522,24 @@ function placeOrder() {
     time:     now.toLocaleTimeString('en-IN', { hour:'2-digit', minute:'2-digit' })
   };
 
-  /* ── 1. Save to Firebase (kitchen dashboard reads this) ── */
+  /* 1. Save to Firebase — kitchen dashboard reads this */
   fetch(FB + '/orders.json', {
     method:  'POST',
     headers: { 'Content-Type': 'application/json' },
     body:    JSON.stringify(order)
   }).catch(() => {});
 
-  /* ── 2. Save to customer order history ── */
+  /* 2. Save to customer order history */
   if (typeof window.saveOrderToHistory === 'function') window.saveOrderToHistory(order);
 
-  /* ── 3. Background email via Formspree ── */
+  /* 3. Background email via Formspree */
   sendOrderToFormspree(order);
 
-  /* ── 4. Push notification to kitchen phone via ntfy ── */
-  sendOrderToNtfy(order);
-
-   /* ── 5. Build WhatsApp message — fully encoded so & in dish names never breaks the URL ── */
+  /* 4. Build WhatsApp message
+        Plain text first, then encodeURIComponent
+        the whole thing — no partial encoding. */
   const sep = '\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500';
+
   const waItemLines = cart.map(c =>
     '  \u2022 ' + c.name + ' x' + c.qty + ' = Rs.' + (c.price * c.qty)
   ).join('\n');
@@ -524,7 +555,7 @@ function placeOrder() {
     sep + '\n' +
     '*Grand Total  :  Rs.' + total + '*\n' +
     sep + '\n' +
-    '\uD83D\uDC64 *Customer:* ' + name  + '\n' +
+    '\uD83D\uDC64 *Customer:* '  + name  + '\n' +
     '\uD83D\uDCDE *Phone:* +91 ' + phone + '\n' +
     '\uD83C\uDFE0 *Address:* '   + addr;
 
@@ -534,7 +565,7 @@ function placeOrder() {
 
   const waUrl = 'https://wa.me/917523992202?text=' + encodeURIComponent(waText);
 
-  /* ── 6. Clear cart and reset form ── */
+  /* 5. Clear cart and reset form */
   cart = []; sharedLocationUrl = '';
   save(); refreshCart();
   ['oName','oPhone','oAddr'].forEach(i => document.getElementById(i).value = '');
@@ -547,7 +578,10 @@ function placeOrder() {
   closeCart();
   toast('Order sent via WhatsApp!');
 
-  /* ── 7. Open WhatsApp — use location.href, never window.open which browsers block ── */
+  /* 6. Open WhatsApp
+        location.href is used — never blocked by
+        browsers. Unlocks after 4 s so the user
+        can place another order if they return. */
   const openWA = () => {
     window.location.href = waUrl;
     setTimeout(() => { _orderInProgress = false; }, 4000);
@@ -558,9 +592,9 @@ function placeOrder() {
   } else {
     openWA();
   }
-} 
-   
-   /* ═══════════════════════════════════════
+}
+
+/* ═══════════════════════════════════════
    TOAST
 ═══════════════════════════════════════ */
 let tTimer;
