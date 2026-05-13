@@ -507,30 +507,32 @@ function placeOrder() {
   /* ── 4. Push notification to kitchen phone via ntfy ── */
   sendOrderToNtfy(order);
 
-  /* ── 5. Build WhatsApp message ── */
-  const nl = '%0A';
-  const itemLines = cart.map(c =>
-    '  ' + c.name + ' x' + c.qty + '  =  Rs.' + (c.price*c.qty)
-  ).join(nl);
-  const locLine = sharedLocationUrl
-    ? (nl + '%F0%9F%93%8D *Location:* ' + encodeURIComponent(sharedLocationUrl))
-    : '';
+   /* ── 5. Build WhatsApp message — fully encoded so & in dish names never breaks the URL ── */
+  const sep = '\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500';
+  const waItemLines = cart.map(c =>
+    '  \u2022 ' + c.name + ' x' + c.qty + ' = Rs.' + (c.price * c.qty)
+  ).join('\n');
 
-  const msg =
-    '%F0%9F%8D%BD%EF%B8%8F *New Order -- ' + id + '*' + nl +
-    '%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80' + nl +
-    '*Items:*' + nl + itemLines + nl +
-    '%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80' + nl +
-    'Subtotal  :  Rs.' + subtotal + nl +
-    'CGST 2.5% :  Rs.' + cgst    + nl +
-    'SGST 2.5% :  Rs.' + sgst    + nl +
-    '%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80' + nl +
-    '*Grand Total  :  Rs.' + total + '*' + nl +
-    '%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80' + nl +
-    '%F0%9F%91%A4 *Customer:* '  + name  + nl +
-    '%F0%9F%93%9E *Phone:* +91 ' + phone + nl +
-    '%F0%9F%8F%A0 *Address:* '   + encodeURIComponent(addr) +
-    locLine;
+  let waText =
+    '\uD83C\uDF7D\uFE0F *New Order -- ' + id + '*\n' +
+    sep + '\n' +
+    '*Items:*\n' + waItemLines + '\n' +
+    sep + '\n' +
+    'Subtotal  :  Rs.' + subtotal + '\n' +
+    'CGST 2.5% :  Rs.' + cgst    + '\n' +
+    'SGST 2.5% :  Rs.' + sgst    + '\n' +
+    sep + '\n' +
+    '*Grand Total  :  Rs.' + total + '*\n' +
+    sep + '\n' +
+    '\uD83D\uDC64 *Customer:* ' + name  + '\n' +
+    '\uD83D\uDCDE *Phone:* +91 ' + phone + '\n' +
+    '\uD83C\uDFE0 *Address:* '   + addr;
+
+  if (sharedLocationUrl) {
+    waText += '\n\uD83D\uDCCD *Location:* ' + sharedLocationUrl;
+  }
+
+  const waUrl = 'https://wa.me/917523992202?text=' + encodeURIComponent(waText);
 
   /* ── 6. Clear cart and reset form ── */
   cart = []; sharedLocationUrl = '';
@@ -545,16 +547,20 @@ function placeOrder() {
   closeCart();
   toast('Order sent via WhatsApp!');
 
-  /* ── 7. Open WhatsApp (with PWA install prompt if applicable) ── */
-  const openWA = () => window.open('https://wa.me/917523992202?text=' + msg, '_blank');
+  /* ── 7. Open WhatsApp — use location.href, never window.open which browsers block ── */
+  const openWA = () => {
+    window.location.href = waUrl;
+    setTimeout(() => { _orderInProgress = false; }, 4000);
+  };
+
   if (typeof window.triggerInstallPrompt === 'function') {
     window.triggerInstallPrompt(openWA);
   } else {
     openWA();
   }
-}
-
-/* ═══════════════════════════════════════
+} 
+   
+   /* ═══════════════════════════════════════
    TOAST
 ═══════════════════════════════════════ */
 let tTimer;
