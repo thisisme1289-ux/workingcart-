@@ -3,9 +3,9 @@
    Strategy: Cache-first for assets, network-first for HTML
 ═══════════════════════════════════════════════════════════ */
 
-const CACHE_NAME   = 'annamay-v3';
-const STATIC_CACHE = 'annamay-static-v3';
-const IMG_CACHE    = 'annamay-images-v3';
+const CACHE_NAME   = 'annamay-v4';
+const STATIC_CACHE = 'annamay-static-v4';
+const IMG_CACHE    = 'annamay-images-v4';
 
 /* Core assets to pre-cache on install */
 const PRECACHE_URLS = [
