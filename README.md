@@ -1,122 +1,174 @@
-I read the full Markdown build pack. It describes a full restaurant ordering website, not just a visual homepage. Before we build, we need to decide the business details, menu, design direction, assets, and backend/payment setup.
+Annamay restaurant and bakery , same , Sector-E, Shantipuram, Phaphamau,
+Prayagraj, Uttar Pradesh — 211013,12726005000153,09EVLPS1542F2Z9 ,+917523992202,annamayrestaurant@gmail.com,yes online payment and order ,  Refund & Cancellation Policy
 
-**Website Structure**
-The site should have:
+Welcome to Annamay Restaurant & Bakery. We value our customers and aim to provide the best food ordering experience. Please read our Refund & Cancellation Policy carefully before placing an order on annamay.in.
 
-1. **Customer Website**
-   - Home screen with Dobara Cafe identity, food photos, status, hours, address, phone, order buttons
-   - Menu browser with categories, search, item cards, veg/non-veg, availability, add-to-cart
-   - Cart drawer with quantity controls, subtotal, GST, delivery fee, total
-   - Checkout with delivery/pickup mode, name, phone, address, location confirmation
-   - Razorpay payment flow
-   - Success modal with tracking link
+1. Order Cancellation
 
-2. **Tracking Page**
-   - Order number
-   - Order status timeline
-   - ETA
-   - Delivery/pickup labels
-   - Cancellation reason if needed
-   - Feedback and Google review link
+Customers may cancel an order within 5 minutes of placing it, provided the restaurant has not started preparing the food.
 
-3. **Admin Dashboard**
-   - Admin login
-   - Live order queue
-   - Accept/cancel/status controls
-   - ETA buttons
-   - Receipt print
-   - Menu item add/edit/delete
-   - Image upload
-   - Pause/accept orders
-   - Basic analytics
+Once food preparation has started, the order cannot be cancelled.
 
-4. **Backend**
-   - Firebase Hosting
-   - Firebase Auth
-   - Firestore
-   - Firebase Storage
-   - Cloud Functions
-   - Razorpay secure payment verification
+Orders marked as “Out for Delivery” cannot be cancelled.
 
-5. **PWA / SEO**
-   - App icons
-   - Manifest
-   - Service worker
-   - Sitemap
-   - Robots
-   - Open Graph image
 
-**Necessary Details I Need From You**
-Please provide whatever you already have. Missing things can be placeholders for now.
+2. Refund Eligibility
 
-1. Restaurant name exactly:
-   - Is it `Dobara Cafe`, `Dobara Café`, or another spelling?
+Refunds may be provided in the following cases:
 
-2. Short name / order prefix:
-   - Example: `DOB`
-   - This becomes order numbers like `DOB-20260516-0001`
+Payment was deducted but the order was not confirmed.
 
-3. Tagline:
-   - Example: `Fresh bites, brewed twice with love`
+Wrong item(s) were delivered.
 
-4. Cuisine type:
-   - Cafe, fast food, bakery, Indian, continental, beverages, multi-cuisine?
+Food was damaged, spoiled, or not fit for consumption.
 
-5. Address, city, phone, WhatsApp, email
+Order was cancelled by the restaurant due to unavailability or operational issues.
 
-6. Opening hours:
-   - Weekdays
-   - Weekends
-   - Any closed day?
+Duplicate payment was made for the same order.
 
-7. Ordering modes:
-   - Delivery only?
-   - Pickup only?
-   - Delivery + pickup?
-   - Dine-in info also?
 
-8. Delivery rules:
-   - Max delivery radius in km
-   - Restaurant latitude/longitude
-   - Delivery fee rules, or should I use the default 0-1 km, 1-2 km, etc. pattern?
+3. Non-Refundable Situations
 
-9. Tax:
-   - GST percentage
-   - Invoice/business name, GSTIN if needed
+Refunds will not be issued for:
 
-10. Menu:
-   - Categories
-   - Item names
-   - Prices
-   - Descriptions if available
-   - Veg/non-veg markers
-   - Availability
-   - Images if available
+Incorrect address or phone number provided by the customer.
 
-11. Visual assets:
-   - Logo
-   - Food photos
-   - Cafe interior/exterior photos
-   - Gallery images
-   - Favicon/PWA icons if you have them
-   - Open Graph/social sharing image
+Delay caused by traffic, weather, or unforeseen circumstances.
 
-12. Backend/payment:
-   - Firebase project ID and web config
-   - Razorpay key ID
-   - Razorpay key secret later, stored securely only in functions
-   - Admin staff emails
-   - Domain name
-   - Google review URL
+Customer dislike of taste or personal preference.
 
-**Design References**
-Yes, references would help a lot. Please send any of these:
+Cancellation requested after food preparation has started.
 
-- 2-5 restaurant/cafe websites you like
-- Instagram page or brand photos for Dobara Cafe
-- Logo/brand colors
-- Menu PDF/photo
-- Any competitor sites you want to match or beat
-- Any design style preference: premium cafe, cozy local, modern fast-food, playful bakery, elegant restaurant, etc.
+Partially consumed food items.
 
-One important note: the brief is built around **Firebase + Razorpay + static HTML/CSS/JS**. We can follow that exactly, or we can decide to use React/Next if you want a more app-like developer experience. My recommendation for this project: start with the brief’s static structure unless you specifically want a framework.
+
+4. Refund Process
+
+Approved refunds will be processed to the original payment method.
+
+Refunds may take 2 -5 business days depending on the customer’s bank or payment provider.
+
+In some cases, refunds may be provided as store credit or coupon balance.
+
+
+5. Failed or Pending Payments
+
+If payment is deducted but no order confirmation is received, customers should contact support immediately.
+
+Such cases are usually resolved within 3 - 6 business days after verification.
+
+
+6. Contact Us
+
+For refund or cancellation support, contact us:
+
+Email: annamayrestaurant@gmail.com
+
+Phone: +917523992202
+
+
+By placing an order on [Annamay Restaurant & Bakery], customers agree to this Refund & Cancellation Policy. 
+
+Delivery Policy
+
+Welcome to Annamay Restaurant & Bakery. This Delivery Policy explains how orders placed on annamay.in are processed and delivered.
+
+1. Delivery Areas
+
+We currently deliver only to selected locations within our service area.
+
+Delivery availability depends on distance, weather, traffic, and operational conditions.
+
+Orders placed outside the service area may be automatically cancelled and refunded.
+
+
+2. Delivery Time
+
+Estimated delivery time is usually 30–60 minutes.
+
+Delivery times may vary during:
+
+peak hours,
+
+weekends,
+
+festivals,
+
+bad weather,
+
+heavy traffic.
+
+
+Delays may occasionally occur due to unforeseen circumstances.
+
+
+3. Order Confirmation
+
+Orders are confirmed only after successful payment and restaurant acceptance.
+
+Customers will receive order updates through the website, SMS, WhatsApp, or phone call if available.
+
+
+4. Delivery Charges
+
+Delivery charges may apply depending on:
+
+distance,
+
+order value,
+
+promotional offers,
+
+peak-time demand.
+
+
+Applicable delivery charges will be shown before payment.
+
+
+5. Customer Responsibilities
+
+Customers must:
+
+provide correct delivery address and contact number,
+
+be available to receive the order,
+
+ensure someone is present at the delivery location.
+
+
+If the delivery fails due to incorrect details or unavailability, the order may not qualify for refund.
+
+6. Contactless Delivery
+
+Contactless delivery may be available upon request.
+
+Delivery partners may leave the order at the doorstep or designated location after confirmation.
+
+
+7. Undelivered Orders
+
+Orders may be cancelled if:
+
+the customer cannot be contacted,
+
+the address is incorrect,
+
+delivery is not possible due to safety or access issues.
+
+
+Refund eligibility for such cases will be decided after review.
+
+8. Food Quality & Safety
+
+All food is prepared following hygiene and safety standards.
+
+Customers are advised to consume delivered food promptly after receiving it.
+
+
+
+
+
+By placing an order on [Annamay Restaurant & Bakery], customers agree to this Delivery Policy. 
+
+
+Fssai and no alcohol 
