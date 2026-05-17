@@ -1,0 +1,414 @@
+menuType,categoryName,dishName,imageUrl,imagePath,hasSpecificImage
+restaurant,Shakes,Strawberry Shake,https://annamay.in/images/strawberry-shake.jpg,images/strawberry-shake.jpg,true
+restaurant,Shakes,Vanilla Shake,https://annamay.in/images/vanilla-shake.jpg,images/vanilla-shake.jpg,true
+restaurant,Shakes,Cold Coffee,https://annamay.in/images/cold-coffee.jpg,images/cold-coffee.jpg,true
+restaurant,Shakes,Oreo Shake,https://annamay.in/images/oreo-shake.jpg,images/oreo-shake.jpg,true
+restaurant,Shakes,KitKat Shake,https://annamay.in/images/kitkat-shake.jpg,images/kitkat-shake.jpg,true
+restaurant,Shakes,Ferrero Shake,https://annamay.in/images/ferrero-shake.jpg,images/ferrero-shake.jpg,true
+restaurant,Shakes,Brownie Shake,https://annamay.in/images/brownie-shake.jpg,images/brownie-shake.jpg,true
+restaurant,Shakes,Banana Shake,https://annamay.in/images/banana-shake.jpg,images/banana-shake.jpg,true
+restaurant,Smoothies,Banana,https://annamay.in/images/banana-smoothie.jpg,images/banana-smoothie.jpg,true
+restaurant,Smoothies,Blueberry,https://annamay.in/images/blueberry-smoothie.jpg,images/blueberry-smoothie.jpg,true
+restaurant,Smoothies,Strawberry,https://annamay.in/images/strawberry-smoothie.jpg,images/strawberry-smoothie.jpg,true
+restaurant,Smoothies,Kiwi Smoothie,https://annamay.in/images/kiwi-smoothie.jpg,images/kiwi-smoothie.jpg,true
+restaurant,Smoothies,Pineapple,https://annamay.in/images/pineapple-smoothie.jpg,images/pineapple-smoothie.jpg,true
+restaurant,Mocktails,Aerated Drinks,https://annamay.in/images/aerated-drinks.jpg,images/aerated-drinks.jpg,true
+restaurant,Mocktails,Canned Soft Drink,https://annamay.in/images/canned-soft-drink.jpg,images/canned-soft-drink.jpg,true
+restaurant,Mocktails,Fresh Lime Soda,https://annamay.in/images/fresh-lime-soda.jpg,images/fresh-lime-soda.jpg,true
+restaurant,Mocktails,Bar Refresher,https://annamay.in/images/bar-refresher-mocktail.jpg,images/bar-refresher-mocktail.jpg,true
+restaurant,Mocktails,Sea Breeze,https://annamay.in/images/sea-breeze-mocktail.jpg,images/sea-breeze-mocktail.jpg,true
+restaurant,Mocktails,Floating Honeymoon,https://annamay.in/images/floating-honeymoon-mocktail.jpg,images/floating-honeymoon-mocktail.jpg,true
+restaurant,Mocktails,French Kiss,https://annamay.in/images/french-kiss-mocktail.jpg,images/french-kiss-mocktail.jpg,true
+restaurant,Mocktails,Guava Mary,https://annamay.in/images/guava-mary-mocktail.jpg,images/guava-mary-mocktail.jpg,true
+restaurant,Mojito & Iced Tea,Lemon Mojito,https://annamay.in/images/lemon-mojito.jpg,images/lemon-mojito.jpg,true
+restaurant,Mojito & Iced Tea,Green Apple Mojito,https://annamay.in/images/green-apple-mojito.jpg,images/green-apple-mojito.jpg,true
+restaurant,Mojito & Iced Tea,Cola Mojito,https://annamay.in/images/cola-mojito.jpg,images/cola-mojito.jpg,true
+restaurant,Mojito & Iced Tea,Masala Coke / Sprite,https://annamay.in/images/masala-coke.jpg,images/masala-coke.jpg,true
+restaurant,Mojito & Iced Tea,Lemon Iced Tea,https://annamay.in/images/lemon-iced-tea.jpg,images/lemon-iced-tea.jpg,true
+restaurant,Mojito & Iced Tea,Peach Iced Tea,https://annamay.in/images/peach-iced-tea.jpg,images/peach-iced-tea.jpg,true
+restaurant,Hot Beverages,Tea,https://annamay.in/images/tea.jpg,images/tea.jpg,true
+restaurant,Hot Beverages,Masal Tea,https://annamay.in/images/masala-tea.jpg,images/masala-tea.jpg,true
+restaurant,Hot Beverages,Hot Coffee,https://annamay.in/images/hot-coffee.jpg,images/hot-coffee.jpg,true
+restaurant,Hot Beverages,Black Coffee,https://annamay.in/images/black-coffee.jpg,images/black-coffee.jpg,true
+restaurant,Hot Beverages,Black Tea,https://annamay.in/images/black-tea.jpg,images/black-tea.jpg,true
+restaurant,Hot Beverages,Hot Chocolate Milk,https://annamay.in/images/hot-chocolate-milk.jpg,images/hot-chocolate-milk.jpg,true
+restaurant,Soups,Veg Manchow,https://annamay.in/images/veg-manchow-soup.jpg,images/veg-manchow-soup.jpg,true
+restaurant,Soups,Hot & Sour,https://annamay.in/images/hot-and-sour-soup.jpg,images/hot-and-sour-soup.jpg,true
+restaurant,Soups,Sweet Corn,https://annamay.in/images/sweet-corn-soup.jpg,images/sweet-corn-soup.jpg,true
+restaurant,Soups,Lemon Coriander,https://annamay.in/images/lemon-coriander-soup.jpg,images/lemon-coriander-soup.jpg,true
+restaurant,Soups,Cream of Mushroom,https://annamay.in/images/cream-of-mushroom-soup.jpg,images/cream-of-mushroom-soup.jpg,true
+restaurant,Soups,Cream of Tomato,https://annamay.in/images/cream-of-tomato-soup.jpg,images/cream-of-tomato-soup.jpg,true
+restaurant,Salads,Green Salad,https://annamay.in/images/green-salad.jpg,images/green-salad.jpg,true
+restaurant,Salads,Aloo Chat,https://annamay.in/images/aloo-chat.jpg,images/aloo-chat.jpg,true
+restaurant,Salads,Greek Salad,https://annamay.in/images/greek-salad.jpg,images/greek-salad.jpg,true
+restaurant,Salads,Chana Chat,https://annamay.in/images/chana-chat.jpg,images/chana-chat.jpg,true
+restaurant,Salads,Crispy Noodle Salad,https://annamay.in/images/crispy-noodle-salad.jpg,images/crispy-noodle-salad.jpg,true
+restaurant,Salads,Kachumber Salad,https://annamay.in/images/kachumber-salad.jpg,images/kachumber-salad.jpg,true
+restaurant,Raita,Mix Veg Raita,https://annamay.in/images/mix-veg-raita.jpg,images/mix-veg-raita.jpg,true
+restaurant,Raita,Boondi Raita,https://annamay.in/images/boondi-raita.jpg,images/boondi-raita.jpg,true
+restaurant,Raita,Cucumber Raita,https://annamay.in/images/cucumber-raita.jpg,images/cucumber-raita.jpg,true
+restaurant,Raita,Mint Raita,https://annamay.in/images/mint-raita.jpg,images/mint-raita.jpg,true
+restaurant,Raita,Pineapple Raita,https://annamay.in/images/pineapple-raita.jpg,images/pineapple-raita.jpg,true
+restaurant,Raita,Fruit Raita,https://annamay.in/images/fruit-raita.jpg,images/fruit-raita.jpg,true
+restaurant,Raita,Plain Curd,https://annamay.in/images/plain-curd.jpg,images/plain-curd.jpg,true
+restaurant,Burgers,Aloo Tikki Burger,https://annamay.in/images/aloo-tikki-burger.jpg,images/aloo-tikki-burger.jpg,true
+restaurant,Burgers,Aloo Tikki Cheese Burger,https://annamay.in/images/aloo-tikki-cheese-burger.jpg,images/aloo-tikki-cheese-burger.jpg,true
+restaurant,Burgers,Veg Double Cheese Burger,https://annamay.in/images/veg-double-cheese-burger.jpg,images/veg-double-cheese-burger.jpg,true
+restaurant,Burgers,Grilled Paneer Burger,https://annamay.in/images/grilled-paneer-burger.jpg,images/grilled-paneer-burger.jpg,true
+restaurant,Burgers,Double Open Burger,https://annamay.in/images/double-open-burger.jpg,images/double-open-burger.jpg,true
+restaurant,Sandwiches,Corn Cheese Grilled Sandwich,https://annamay.in/images/corn-cheese-grilled-sandwich.jpg,images/corn-cheese-grilled-sandwich.jpg,true
+restaurant,Sandwiches,Paneer Tikka Grilled Sandwich,https://annamay.in/images/paneer-tikka-grilled-sandwich.jpg,images/paneer-tikka-grilled-sandwich.jpg,true
+restaurant,Sandwiches,English Grilled Veg Sandwich,https://annamay.in/images/english-grilled-veg-sandwich.jpg,images/english-grilled-veg-sandwich.jpg,true
+restaurant,Sandwiches,Veg Grilled Sandwich,https://annamay.in/images/veg-grilled-sandwich.jpg,images/veg-grilled-sandwich.jpg,true
+restaurant,Sandwiches,Bombay Masala Grilled Sandwich,https://annamay.in/images/bombay-masala-grilled-sandwich.jpg,images/bombay-masala-grilled-sandwich.jpg,true
+restaurant,Sandwiches,Grilled Mushroom Sandwich,https://annamay.in/images/grilled-mushroom-sandwich.jpg,images/grilled-mushroom-sandwich.jpg,true
+restaurant,Rolls,Mushroom Tikka Roll,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Rolls,Paneer Tikka Roll,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Rolls,Chilli Paneer Roll,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Rolls,Peri Peri Paneer Roll,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Rolls,Corn Cheese Roll,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Momos,Steamed Veg Momos,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Momos,Pan Fried Veg Momos,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Momos,Steamed Paneer Momos,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Momos,Tandoori Veg Momos,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Momos,Tandoori Paneer Momos,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Pasta,Creamy Alfredo,https://annamay.in/images/creamy-alfredo.jpg,images/creamy-alfredo.jpg,true
+restaurant,Pasta,Saucy Arrabiata,https://annamay.in/images/saucy-arrabiata.jpg,images/saucy-arrabiata.jpg,true
+restaurant,Pasta,Mac & Cheese,https://annamay.in/images/mac-and-cheese.jpg,images/mac-and-cheese.jpg,true
+restaurant,Pasta,Pesto Pasta,https://annamay.in/images/pesto-pasta.jpg,images/pesto-pasta.jpg,true
+restaurant,Pasta,Pinky Penne,https://annamay.in/images/pinky-penne.jpg,images/pinky-penne.jpg,true
+restaurant,Pasta,Aglio-e-Olio Linguine,https://annamay.in/images/aglio-e-olio-linguine.jpg,images/aglio-e-olio-linguine.jpg,true
+restaurant,Pasta,Primavera Pasta,https://annamay.in/images/primavera-pasta.jpg,images/primavera-pasta.jpg,true
+restaurant,Pizza,Margherita,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Pizza,Capsicum Onion Pizza,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Pizza,Corn Onion Pizza,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Pizza,Al-Funghi Pizza,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Pizza,Paneer Tikka Pizza,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Pizza,Chilli Paneer Pizza,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Pizza,Farm Fresh Pizza,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Pizza,Chilli Mushroom Pizza,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Pizza,4 Cheese Pizza,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Continental Munchies,French Fries,https://annamay.in/images/french-fries.jpg,images/french-fries.jpg,true
+restaurant,Continental Munchies,Peri Peri French Fries,https://annamay.in/images/peri-peri-french-fries.jpg,images/peri-peri-french-fries.jpg,true
+restaurant,Continental Munchies,Plain Garlic Bread (4pcs),https://annamay.in/images/plain-garlic-bread.jpg,images/plain-garlic-bread.jpg,true
+restaurant,Continental Munchies,Cheese Garlic Bread (4pcs),https://annamay.in/images/cheese-garlic-bread.jpg,images/cheese-garlic-bread.jpg,true
+restaurant,Continental Munchies,Mexican Loaded Nachos,https://annamay.in/images/mexican-loaded-nachos.jpg,images/mexican-loaded-nachos.jpg,true
+restaurant,Continental Munchies,Corn Cheese Bruschetta,https://annamay.in/images/corn-cheese-bruschetta.jpg,images/corn-cheese-bruschetta.jpg,true
+restaurant,Continental Munchies,Mushroom Cheese Bruschetta,https://annamay.in/images/mushroom-cheese-bruschetta.jpg,images/mushroom-cheese-bruschetta.jpg,true
+restaurant,Continental Munchies,Corn & Bell Peppers Bruschetta,https://annamay.in/images/corn-bell-peppers-bruschetta.jpg,images/corn-bell-peppers-bruschetta.jpg,true
+restaurant,Continental Munchies,Mushroom & Bell Peppers Bruschetta,https://annamay.in/images/mushroom-bell-peppers-bruschetta.jpg,images/mushroom-bell-peppers-bruschetta.jpg,true
+restaurant,Pav Bhaji,Pav Bhaji,https://annamay.in/images/pav-bhaji.jpg,images/pav-bhaji.jpg,true
+restaurant,Pav Bhaji,Cheese Pav Bhaji,https://annamay.in/images/cheese-pav-bhaji.jpg,images/cheese-pav-bhaji.jpg,true
+restaurant,Pav Bhaji,Only Bhaji,https://annamay.in/images/only-bhaji.jpg,images/only-bhaji.jpg,true
+restaurant,Pav Bhaji,Cheese Bhaji,https://annamay.in/images/cheese-bhaji.jpg,images/cheese-bhaji.jpg,true
+restaurant,Pav Bhaji,Extra Butter Pav (2pcs),https://annamay.in/images/extra-butter-pav.jpg,images/extra-butter-pav.jpg,true
+restaurant,Bhature & Chole Kulche,Onion Kulcha with Choley,https://annamay.in/images/onion-kulcha-choley.jpg,images/onion-kulcha-choley.jpg,true
+restaurant,Bhature & Chole Kulche,Aloo Kulcha with Choley,https://annamay.in/images/aloo-kulcha-choley.jpg,images/aloo-kulcha-choley.jpg,true
+restaurant,Bhature & Chole Kulche,Aloo Pyaaz Kulcha with Choley,https://annamay.in/images/aloo-pyaaz-kulcha-choley.jpg,images/aloo-pyaaz-kulcha-choley.jpg,true
+restaurant,Bhature & Chole Kulche,Paneer Kulcha with Choley,https://annamay.in/images/paneer-kulcha-choley.jpg,images/paneer-kulcha-choley.jpg,true
+restaurant,Bhature & Chole Kulche,Mix Stuffed Kulcha with Choley,https://annamay.in/images/mix-stuffed-kulcha-choley.jpg,images/mix-stuffed-kulcha-choley.jpg,true
+restaurant,Oriental Starters,Spring Roll,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Oriental Starters,Chilli Potato,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Oriental Starters,Honey Chilli Potato,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Oriental Starters,Vegetable Manchurian Dry,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Oriental Starters,Crispy Corn Salt & Pepper,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Oriental Starters,Chilli Paneer Dry,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Oriental Starters,Paneer Manchurian Dry,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Oriental Starters,Chilli Mushroom,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Oriental Starters,Chilli Babycorn,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Oriental Starters,Mushroom Salt & Pepper,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Continental Starters,Corn Cheese Ball,https://annamay.in/images/corn-cheese-ball.jpg,images/corn-cheese-ball.jpg,true
+restaurant,Continental Starters,Mexican Quesadilla,https://annamay.in/images/mexican-quesadilla.jpg,images/mexican-quesadilla.jpg,true
+restaurant,Continental Starters,Becked Mushroom Cap,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Continental Starters,Grilled Cotton Cheese Quesdilla,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Clay Oven Starters (Tandoor),Veg Seekh Kebab (8pcs),https://annamay.in/images/veg-seekh-kebab.jpg,images/veg-seekh-kebab.jpg,true
+restaurant,Clay Oven Starters (Tandoor),Rajasthani Paneer Tikka (8pcs),https://annamay.in/images/rajasthani-paneer-tikka.jpg,images/rajasthani-paneer-tikka.jpg,true
+restaurant,Clay Oven Starters (Tandoor),Malai Paneer Tikka (8pcs),https://annamay.in/images/malai-paneer-tikka.jpg,images/malai-paneer-tikka.jpg,true
+restaurant,Clay Oven Starters (Tandoor),Achari Paneer Tikka (8pcs),https://annamay.in/images/achari-paneer-tikka.jpg,images/achari-paneer-tikka.jpg,true
+restaurant,Clay Oven Starters (Tandoor),Mushroom Tikka (14pcs),https://annamay.in/images/mushroom-tikka.jpg,images/mushroom-tikka.jpg,true
+restaurant,Clay Oven Starters (Tandoor),Tandoori Soya Chaap (10pcs),https://annamay.in/images/tandoori-soya-chaap.jpg,images/tandoori-soya-chaap.jpg,true
+restaurant,Clay Oven Starters (Tandoor),Achari Soya Chaap (10pcs),https://annamay.in/images/achari-soya-chaap.jpg,images/achari-soya-chaap.jpg,true
+restaurant,Clay Oven Starters (Tandoor),Malai Chaap (10pcs),https://annamay.in/images/malai-chaap.jpg,images/malai-chaap.jpg,true
+restaurant,Clay Oven Starters (Tandoor),Classic Dahi Ke Kebab (8pcs),https://annamay.in/images/classic-dahi-ke-kebab.jpg,images/classic-dahi-ke-kebab.jpg,true
+restaurant,Clay Oven Starters (Tandoor),Hara Bhara Kebab (8pcs),https://annamay.in/images/hara-bhara-kebab.jpg,images/hara-bhara-kebab.jpg,true
+restaurant,Clay Oven Starters (Tandoor),Stuffed Tandoori Mushroom (10pcs),https://annamay.in/images/stuffed-tandoori-mushroom.jpg,images/stuffed-tandoori-mushroom.jpg,true
+restaurant,Sizzlers,Cottage Cheese Sizzler,https://annamay.in/images/cottage-cheese-sizzler.jpg,images/cottage-cheese-sizzler.jpg,true
+restaurant,Sizzlers,Chinese Sizzler,https://annamay.in/images/chinese-sizzler.jpg,images/chinese-sizzler.jpg,true
+restaurant,Sizzlers,Mexican Sizzler,https://annamay.in/images/mexican-sizzler.jpg,images/mexican-sizzler.jpg,true
+restaurant,Sizzlers,Kebab Sizzler,https://annamay.in/images/kebab-sizzler.jpg,images/kebab-sizzler.jpg,true
+restaurant,Platters,Tandoori Veg Platter (15pcs),https://annamay.in/images/tandoori-veg-platter.jpg,images/tandoori-veg-platter.jpg,true
+restaurant,Platters,Chinese Platter,https://annamay.in/images/chinese-platter.jpg,images/chinese-platter.jpg,true
+restaurant,Oriental Bowl (Served With Steamed Rice),Manchurian Gravy,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Oriental Bowl (Served With Steamed Rice),Manchurian Balls with Hot Garlic Sauce,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Oriental Bowl (Served With Steamed Rice),Saucy Schezwan Style Cottage Cheese,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Oriental Bowl (Served With Steamed Rice),Crispy Mushroom in Chilli & Sauce,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Oriental Bowl (Served With Steamed Rice),Chilli Paneer Gravy,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Oriental Bowl (Served With Steamed Rice),Vegetable Chopsuey,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Oriental Bowl (Served With Steamed Rice),Thai Curry (Yellow / Red),https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Chinese Rice & Noodles,Hakka Noodles,https://annamay.in/images/hakka-noodles.jpg,images/hakka-noodles.jpg,true
+restaurant,Chinese Rice & Noodles,Burn Chilli Garlic Noodles,https://annamay.in/images/burn-chilli-garlic-noodles.jpg,images/burn-chilli-garlic-noodles.jpg,true
+restaurant,Chinese Rice & Noodles,Schezwan Noodles,https://annamay.in/images/schezwan-noodles.jpg,images/schezwan-noodles.jpg,true
+restaurant,Chinese Rice & Noodles,Singapore Noodles,https://annamay.in/images/singapore-noodles.jpg,images/singapore-noodles.jpg,true
+restaurant,Chinese Rice & Noodles,Veg Fried Rice,https://annamay.in/images/veg-fried-rice.jpg,images/veg-fried-rice.jpg,true
+restaurant,Chinese Rice & Noodles,Schezwan Fried Rice,https://annamay.in/images/schezwan-fried-rice.jpg,images/schezwan-fried-rice.jpg,true
+restaurant,Chinese Rice & Noodles,Singapore Fried Rice,https://annamay.in/images/singapore-fried-rice.jpg,images/singapore-fried-rice.jpg,true
+restaurant,Chinese Rice & Noodles,Corn & Mushroom Fried Rice,https://annamay.in/images/corn-mushroom-fried-rice.jpg,images/corn-mushroom-fried-rice.jpg,true
+restaurant,Chinese Rice & Noodles,Paneer Fried Rice,https://annamay.in/images/paneer-fried-rice.jpg,images/paneer-fried-rice.jpg,true
+restaurant,International / Hand Crafted Meals,Verdure Miste Gratinate (Baked Vegetables),https://annamay.in/images/verdure-miste-gratinate.jpg,images/verdure-miste-gratinate.jpg,true
+restaurant,International / Hand Crafted Meals,Vegetable Lasagna,https://annamay.in/images/vegetable-lasagna.jpg,images/vegetable-lasagna.jpg,true
+restaurant,South Indian,Classic Masala Dosa,https://annamay.in/images/classic-masala-dosa.jpg,images/classic-masala-dosa.jpg,true
+restaurant,South Indian,Plain Dosa,https://annamay.in/images/plain-dosa.jpg,images/plain-dosa.jpg,true
+restaurant,South Indian,Paneer Dosa,https://annamay.in/images/paneer-dosa.jpg,images/paneer-dosa.jpg,true
+restaurant,South Indian,Onion Dosa,https://annamay.in/images/onion-dosa.jpg,images/onion-dosa.jpg,true
+restaurant,South Indian,Paneer Cheese Dosa,https://annamay.in/images/paneer-cheese-dosa.jpg,images/paneer-cheese-dosa.jpg,true
+restaurant,South Indian,Masala Cheese Dosa,https://annamay.in/images/masala-cheese-dosa.jpg,images/masala-cheese-dosa.jpg,true
+restaurant,South Indian,Idli (4pcs) with Sambar,https://annamay.in/images/idli-4pcs-sambar.jpg,images/idli-4pcs-sambar.jpg,true
+restaurant,South Indian,Masala Idli with Sambar,https://annamay.in/images/masala-idli-sambar.jpg,images/masala-idli-sambar.jpg,true
+restaurant,South Indian,Only Sambar,https://annamay.in/images/only-sambar.jpg,images/only-sambar.jpg,true
+restaurant,South Indian,Idli (2pcs),https://annamay.in/images/idli-2pcs.jpg,images/idli-2pcs.jpg,true
+restaurant,South Indian,Double Roast Uthappa,https://annamay.in/images/double-roast-uthappa.jpg,images/double-roast-uthappa.jpg,true
+restaurant,Indian Main Course,Heeng Jeera Ke Chatpate Aloo,https://annamay.in/images/heeng-jeera-aloo.jpg,images/heeng-jeera-aloo.jpg,true
+restaurant,Indian Main Course,Mix Vegetable,https://annamay.in/images/mix-vegetable.jpg,images/mix-vegetable.jpg,true
+restaurant,Indian Main Course,Subz Kolhapuri,https://annamay.in/images/subz-kolhapuri.jpg,images/subz-kolhapuri.jpg,true
+restaurant,Indian Main Course,Palak Paneer,https://annamay.in/images/palak-paneer.jpg,images/palak-paneer.jpg,true
+restaurant,Indian Main Course,Shahi Paneer,https://annamay.in/images/shahi-paneer.jpg,images/shahi-paneer.jpg,true
+restaurant,Indian Main Course,Paneer Do Pyaza,https://annamay.in/images/paneer-do-pyaza.jpg,images/paneer-do-pyaza.jpg,true
+restaurant,Indian Main Course,Paneer Butter Masala,https://annamay.in/images/paneer-butter-masala.jpg,images/paneer-butter-masala.jpg,true
+restaurant,Indian Main Course,Paneer Lababdar,https://annamay.in/images/paneer-lababdar.jpg,images/paneer-lababdar.jpg,true
+restaurant,Indian Main Course,Paneer Khurchan,https://annamay.in/images/paneer-khurchan.jpg,images/paneer-khurchan.jpg,true
+restaurant,Indian Main Course,Paneer Makhani,https://annamay.in/images/paneer-makhani.jpg,images/paneer-makhani.jpg,true
+restaurant,Indian Main Course,Paneer Handi,https://annamay.in/images/paneer-handi.jpg,images/paneer-handi.jpg,true
+restaurant,Indian Main Course,Paneer Rogan Josh,https://annamay.in/images/paneer-rogan-josh.jpg,images/paneer-rogan-josh.jpg,true
+restaurant,Indian Main Course,Paneer Kadai,https://annamay.in/images/paneer-kadai.jpg,images/paneer-kadai.jpg,true
+restaurant,Indian Main Course,Paneer Methi Malai,https://annamay.in/images/paneer-methi-malai.jpg,images/paneer-methi-malai.jpg,true
+restaurant,Indian Main Course,Paneer Tikka Masala,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Indian Main Course,Mushroom Do Pyaza,https://annamay.in/images/mushroom-do-pyaza.jpg,images/mushroom-do-pyaza.jpg,true
+restaurant,Indian Main Course,Mushroom Masala,https://annamay.in/images/mushroom-masala.jpg,images/mushroom-masala.jpg,true
+restaurant,Indian Main Course,Mushroom Matar Masala,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Indian Main Course,Mushroom Rogan Josh,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Indian Main Course,Soya Chaap Tikka Masala,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Indian Main Course,Soya Chaap Rogan Josh,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Indian Main Course,Veg Kofta Curry,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Indian Main Course,Malai Kofta,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Indian Main Course,Kaju Curry,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Crispy Papad,Roasted Papad (4pcs),https://annamay.in/images/roasted-papad.jpg,images/roasted-papad.jpg,true
+restaurant,Crispy Papad,Fried Papad (4pcs),https://annamay.in/images/fried-papad.jpg,images/fried-papad.jpg,true
+restaurant,Crispy Papad,Masala Papad (3pcs),https://annamay.in/images/masala-papad.jpg,images/masala-papad.jpg,true
+restaurant,Dal,Dal Fry,https://annamay.in/images/dal-fry.jpg,images/dal-fry.jpg,true
+restaurant,Dal,Dal Tadka,https://annamay.in/images/dal-tadka.jpg,images/dal-tadka.jpg,true
+restaurant,Dal,Dal Dhaba,https://annamay.in/images/dal-dhaba.jpg,images/dal-dhaba.jpg,true
+restaurant,Dal,Dal Makhani,https://annamay.in/images/dal-makhani.jpg,images/dal-makhani.jpg,true
+restaurant,Tandoori Breads,Plain Roti,https://annamay.in/images/plain-roti.jpg,images/plain-roti.jpg,true
+restaurant,Tandoori Breads,Butter Roti,https://annamay.in/images/butter-roti.jpg,images/butter-roti.jpg,true
+restaurant,Tandoori Breads,Missi Roti,https://annamay.in/images/missi-roti.jpg,images/missi-roti.jpg,true
+restaurant,Tandoori Breads,Lachha Paratha,https://annamay.in/images/lachha-paratha.jpg,images/lachha-paratha.jpg,true
+restaurant,Tandoori Breads,Hari Mirch Paratha,https://annamay.in/images/hari-mirch-paratha.jpg,images/hari-mirch-paratha.jpg,true
+restaurant,Tandoori Breads,Plain Naan,https://annamay.in/images/plain-naan.jpg,images/plain-naan.jpg,true
+restaurant,Tandoori Breads,Butter Naan,https://annamay.in/images/butter-naan.jpg,images/butter-naan.jpg,true
+restaurant,Tandoori Breads,Garlic Naan,https://annamay.in/images/garlic-naan.jpg,images/garlic-naan.jpg,true
+restaurant,Tandoori Breads,Masala Cheese Naan,https://annamay.in/images/masala-cheese-naan.jpg,images/masala-cheese-naan.jpg,true
+restaurant,Tandoori Breads,Onion Kulcha,https://annamay.in/images/onion-kulcha.jpg,images/onion-kulcha.jpg,true
+restaurant,Tandoori Breads,Aloo Kulcha,https://annamay.in/images/aloo-kulcha.jpg,images/aloo-kulcha.jpg,true
+restaurant,Tandoori Breads,Paneer Kulcha,https://annamay.in/images/paneer-kulcha.jpg,images/paneer-kulcha.jpg,true
+restaurant,Tandoori Breads,Mix Stuffed Kulcha,https://annamay.in/images/mix-stuffed-kulcha.jpg,images/mix-stuffed-kulcha.jpg,true
+restaurant,Tandoori Breads,Amritsar Kulcha,https://annamay.in/images/amritsar-kulcha.jpg,images/amritsar-kulcha.jpg,true
+restaurant,Rice & Biryani,Steamed Rice,https://annamay.in/images/steamed-rice.jpg,images/steamed-rice.jpg,true
+restaurant,Rice & Biryani,Jeera Rice,https://annamay.in/images/jeera-rice.jpg,images/jeera-rice.jpg,true
+restaurant,Rice & Biryani,Onion Jeera Rice,https://annamay.in/images/onion-jeera-rice.jpg,images/onion-jeera-rice.jpg,true
+restaurant,Rice & Biryani,Peas Pulao,https://annamay.in/images/peas-pulao.jpg,images/peas-pulao.jpg,true
+restaurant,Rice & Biryani,Corn Masala Pulao,https://annamay.in/images/corn-masala-pulao.jpg,images/corn-masala-pulao.jpg,true
+restaurant,Rice & Biryani,Paneer Pulao,https://annamay.in/images/paneer-pulao.jpg,images/paneer-pulao.jpg,true
+restaurant,Rice & Biryani,Navratan Pulao,https://annamay.in/images/navratan-pulao.jpg,images/navratan-pulao.jpg,true
+restaurant,Rice & Biryani,Veg Dum Biryani,https://annamay.in/images/veg-dum-biryani.jpg,images/veg-dum-biryani.jpg,true
+restaurant,Rice & Biryani,Hyderabadi Biryani,https://annamay.in/images/hyderabadi-biryani.jpg,images/hyderabadi-biryani.jpg,true
+restaurant,Rice & Biryani,Paneer Tikka Biryani,https://annamay.in/images/paneer-tikka-biryani.jpg,images/paneer-tikka-biryani.jpg,true
+restaurant,Desserts (Annamy),Gulab Jamun (2pcs),https://annamay.in/images/gulab-jamun.jpg,images/gulab-jamun.jpg,true
+restaurant,Desserts (Annamy),Gulab Jamun with Ice Cream,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Desserts (Annamy),Gulab Jamun with Vanilla Custard & Rabdi,https://annamay.in/images/gulab-jamun-custard-rabdi.jpg,images/gulab-jamun-custard-rabdi.jpg,true
+restaurant,Desserts (Annamy),Hot Brownie with Chocolate Syrup,https://annamay.in/images/hot-brownie-chocolate.jpg,images/hot-brownie-chocolate.jpg,true
+restaurant,Desserts (Annamy),Sizzling Chocolate Brownie,https://annamay.in/images/sizzling-chocolate-brownie.jpg,images/sizzling-chocolate-brownie.jpg,true
+restaurant,Desserts (Annamy),Choco Brownie with Ice Cream,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Desserts (Annamy),Vanilla Ice Cream,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Desserts (Annamy),Strawberry Ice Cream,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Desserts (Annamy),Butterscotch Ice Cream,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Desserts (Annamy),Chocolate Ice Cream,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Desserts (Annamy),Kesar Pista Ice Cream,https://annamay.in/images/default.jpg,images/default.jpg,false
+restaurant,Desserts (Annamy),American Nuts,https://annamay.in/images/american-nuts-icecream.jpg,images/american-nuts-icecream.jpg,true
+bakery,Classic Cakes,Butterscotch,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Classic Cakes,Black Forest,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Classic Cakes,Pineapple,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Cakes,Café Delight,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Cakes,Strawberry,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Cakes,Blueberry Bliss Delight,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Cakes,Mixed Berries,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Cakes,Creamy Chocolaty Delight,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Cakes,Milk Chocolate Flavour,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Cakes,Fudgy Excess,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Cakes,Dark Chocolate Flavour,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Cakes,Dark Knight,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Cakes,Chocolaty Globe,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Cakes,Dark Overload,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Cakes,Dark Fantasy,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Cakes,Chocolaty Vanilla,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Exotic Cakes,Mango Tango Delight,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Exotic Cakes,White Forest,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Exotic Cakes,Cherry Mousse,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Exotic Cakes,Fruit Chocolate Flavour,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Exotic Cakes,Mango & Blueberry,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Exotic Cakes,Chocolaty Caramel Indulgence,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Exotic Cakes,Chocolaty Bombs,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Exotic Cakes,Red Velvet Dark Fantasy,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Exotic Cakes,R.V. Cream Cheese,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Exotic Cakes,R.V. Raspberry Choco Flavour,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Exotic Cakes,Raspberry Madness,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Exotic Cakes,Coconut Bliss,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Exotic Cakes,Chocolaty Excess,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Exotic Cakes,Roasted Almond,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Exotic Cakes,KitKat & Gems,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Exotic Cakes,Nutella Rocher,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Exotic Cakes,KitKat,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Exotic Cakes,Oreo,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Exotic Cakes,Lotus Biscoff,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Exotic Cakes,Rose & Pistachio,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Exotic Cakes,Dark Drip Overload,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Exotic Cakes,Cupcake Drip,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Exotic Cakes,Snickers,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Exotic Cakes,Pinacolada,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Exotic Cakes,Rainbow,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Exotic Cakes,Cupid,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Premium Exotic Cakes,L'Opera,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Pie Cakes,Banoffee,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Pie Cakes,Mango (Seasonal),https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Pie Cakes,Dark Chocolate Flavour,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Pie Cakes,Chocolaty Caramel,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Indian Cakes (Inan Cakes),Rasmalai,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Indian Cakes (Inan Cakes),Gulab Jamun Tart,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Indian Cakes (Inan Cakes),Motichoor,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Indian Cakes (Inan Cakes),Kaju Katli,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Indian Cakes (Inan Cakes),Gulkand,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Indian Cakes (Inan Cakes),Coconut Burfi,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Indian Cakes (Inan Cakes),Chocolaty Mousse,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Indian Cakes (Inan Cakes),Chocolaty Caramel,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Supreme Cakes,Flower Basket,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Supreme Cakes,Exquisite Fruit,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Supreme Cakes,Golden Drip,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Supreme Cakes,Lotus Biscoff,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Supreme Cakes,Rose & Pistachio,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Supreme Cakes,Dark Drip Overload,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,No-Bake Cheesecakes,Original New York,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,No-Bake Cheesecakes,Hazelnut,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,No-Bake Cheesecakes,Cookies & Cream,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,No-Bake Cheesecakes,Blueberry Bliss Delight,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,No-Bake Cheesecakes,Strawberry,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,No-Bake Cheesecakes,Lotus Biscoff,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,No-Bake Cheesecakes,Mango Symphony,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Baked Cheesecakes,Triple Chocolate Flavour,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Baked Cheesecakes,Lotus Biscoff,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Baked Cheesecakes,Nutella,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Baked Cheesecakes,Dark Chocolate Flavour,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Baked Cheesecakes,Sea Salt Caramel,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Baked Cheesecakes,Blueberry,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Baked Cheesecakes,Strawberry Blossom,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Ice Cream Cakes,Black Forest,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Ice Cream Cakes,Butterscotch,https://annamay.in/images/butterscotch-icecream.jpg,images/butterscotch-icecream.jpg,true
+bakery,Ice Cream Cakes,Chocolaty Chips,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Ice Cream Cakes,Mango,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Ice Cream Cakes,Red Velvet,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Ice Cream Cakes,American Nuts,https://annamay.in/images/american-nuts-icecream.jpg,images/american-nuts-icecream.jpg,true
+bakery,Giant Macaron Cakes,Mixed Berries & Lavender,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Giant Macaron Cakes,Tropical Fruit,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Giant Macaron Cakes,Coffee & Hazelnut,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Giant Macaron Cakes,Dark Chocolate Flavour,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Burst Mini Cakes,Black Forest,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Burst Mini Cakes,Nutella,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Burst Mini Cakes,Peanut Caramel,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Burst Mini Cakes,Triple Chocolate Flavour,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Photo Cake,Custom photo printed on edible paper,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Shape Cake,Customised shapes made using cream frosting,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,3D Customised Cake,Fondant designed cakes as per desire,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Lava Cake,Lava Cake (single flavour),https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Hot Coffee Filled Donut,Hot Coffee Filled Donut,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Donuts,Cinnamon Sugar,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Donuts,Rainbow Sprinkled,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Donuts,Dark Chocolate Flavour Filled,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Donuts,White Chocolate Flavour Filled,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Donuts,Mango Pudding Filled,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Donuts,Strawberry Jelly Filled,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Donuts,Double Trouble,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Donuts,Chocolaty Ring,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Donuts,Oreo,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Donuts,Caramel Swirl,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Tarts,Apple Pie,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Tarts,Chocolaty Delight,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Tarts,Lemon Zest Symphony,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Tarts,Dark Chocolate Flavour,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Tarts,Strawberry,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,OG Eggless Macarons,Peanut Butter,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,OG Eggless Macarons,Rose & Pistachio,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,OG Eggless Macarons,Black Forest,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,OG Eggless Macarons,Blueberry,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,OG Eggless Macarons,Strawberry,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,OG Eggless Macarons,Lemon,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,OG Eggless Macarons,Dark Chocolate Flavour,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,OG Eggless Macarons,Lavender,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,OG Eggless Macarons,Café Elegance,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,OG Eggless Macarons,Chocolaty Orange,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Glass Desserts,Pineapple Pudding,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Glass Desserts,Strawberry Delight,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Glass Desserts,Chocolaty Mousse,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Glass Desserts,Blueberry Cheesecake,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Glass Desserts,Mango Soufflé,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Glass Desserts,Lotus Biscoff,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Glass Desserts,Oreo Crunch,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Cookie Dough Pizza,Cookie Dough Pizza,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Brownies,Walnut,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Brownies,Chocolaty Chips,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Brownies,Hazelnut,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Brownies,Golden Caramel Indulgence,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Brownies,Oreo,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Brownies,Dark Chocolate Flavour,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Edible Cup Mousse,Coffee,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Edible Cup Mousse,Strawberry,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Edible Cup Mousse,Dark Chocolate Flavour,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Cupcakes,Raspberry Ripple,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Cupcakes,Cookies & Cream,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Cupcakes,Apple Cinnamon,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Cupcakes,Coconut Bliss,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Cupcakes,Milk Chocolate Flavour,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Cupcakes,Minty Delight,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Cupcakes,Strawberries & Cream,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Cupcakes,OG Red Velvet,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Cupcakes,Red Velvet Cream Cheese,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Cupcakes,Blueberry Cream Cheese,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Cupcakes,Vanilla Dream,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Cupcakes,Dark Chocolate Flavour,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Cupcakes,Divine Nutella,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Cupcakes,Coffee Bean Symphony,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Cupcakes,Rainbow,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Cupcakes,Snickers,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Cupcakes,Neopolitan,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Well Cakes,Red Velvet White Chocolate Flavour,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Well Cakes,Dark Chocolate Flavour,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Well Cakes,Nutella Madness,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Well Cakes,Triple Chocolate Flavour,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Muffins,Double Trouble,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Muffins,Blueberry,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Muffins,Sticky Toffee,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Muffins,Mawa Flavor,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Muffins,Vanilla Strawberry,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Muffins,Marble Cake,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Muffins,Banana Walnut,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Muffins,Chocolaty Chips,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Bar Cakes,Double Trouble,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Bar Cakes,Blueberry,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Bar Cakes,Sticky Toffee,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Bar Cakes,Mawa Flavor,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Bar Cakes,Vanilla Strawberry,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Bar Cakes,Marble Cake,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Bar Cakes,Banana Walnut,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Bar Cakes,Chocolaty Chips,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Tub Desserts,Tiramisu,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Tub Desserts,Fresh Fruit & Roasted Almond,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Tub Desserts,Tres Leche,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Tub Desserts,Lemon & Blueberry,https://annamay.in/images/default.jpg,images/default.jpg,false
+bakery,Tub Desserts,Nutty Dark Chocolate Flavour,https://annamay.in/images/default.jpg,images/default.jpg,false
